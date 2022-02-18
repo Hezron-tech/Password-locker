@@ -1,15 +1,20 @@
+## create a class
 class User:
+    """generate an instance of a class
+    """
+use_list=[]#list of users
 
-    user_list=[]  
+def __init__(self,username,password):
+    self.username = username
+    self.password =password
 
-    def __init__(self,user_name,user_password):
+
+    ##save users
+    def save_user(self):
+        User.use_list.append(self)
+
+        # 
 
 
-        self.user_name=user_name
-        self.user_password=user_password
 
-# creating user
-    def create_user(self):
-
-        User.user_list.append(self)
 
