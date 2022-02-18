@@ -1,4 +1,7 @@
 ## create a class
+from calendar import c
+
+
 class User:
     """generate an instance of a class
     """
@@ -16,9 +19,18 @@ class User:
     def delete_user(self):
         User.user_list.remove(self)
 
-        
-    def view_user(self):
-        User.user_list.view(self)    
+       
+
+    @classmethod
+    def find_by_user(cls,username):
+        for user in cls.user_list:
+            if user.username == username:
+                return user
+
+
+ 
+      
+   
 
 
        
