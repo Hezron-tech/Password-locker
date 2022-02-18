@@ -1,6 +1,4 @@
 ## create a class
-from calendar import c
-
 
 class User:
     """generate an instance of a class
