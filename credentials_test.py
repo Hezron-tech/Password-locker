@@ -46,21 +46,21 @@ class TestCredentials(unittest.TestCase):
         '''
         confirm that credentials actually exists
         '''
-        self.new_credentials.save_credentials()
-        test_credentials = Credential("Twitter", "trythis","passcode")
-        test_credentials.save_credentials()
-        credentials_exists = Credential.credentials_exists("Twitter")
+        self.new_credential.save_credential()
+        test_credential = Credential("FB", "glovu","1234")
+        test_credential.save_credential()
+        credentials_exists = Credential.credentials_exists("FB")
         self.assertTrue(credentials_exists)
 
 
 
-        
+
 ##displaying the credentials
     def test_display_credentials(self):
         '''
         test if all credentials can be displayed
         '''
-        self.assertEqual(Credential.display_credentials(), Credential.credentials_list)
+        self.assertEqual(Credential.display_credentials(), Credential.credential_list)
         ##copy    
 
 

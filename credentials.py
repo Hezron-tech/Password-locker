@@ -45,17 +45,17 @@ class Credential:
 
     @classmethod
     def find_account(cls,account_name):
-         for credential in cls.Credential.Credential_list:
+         for credential in cls.Credential.credential_list:
              if(credential.account_name==account_name):
                  return credential
 
     @classmethod
-    def credentials_exists(cls, account):
+    def credentials_exists(cls, account_name):
         '''
         confirm a class actually exists
         '''
-        for credentials in cls.credentials_list:
-            if credentials.account == account:
+        for credential in cls.credential_list:
+            if credential.account_name == account_name:
                 return True
         return False
         #Display credentials
@@ -64,7 +64,7 @@ class Credential:
         '''
         method that returns all credentials
         '''
-        return cls.credentials_list             
+        return cls.credential_list             
 
 
     
