@@ -14,6 +14,13 @@ class Credential:
     def save_credential(self):
         Credential.Credential_list.append(self)
 
+    
+
+
+
+    
+            
+
 
 
 

@@ -19,11 +19,23 @@ class TestCredentials(unittest.TestCase):
         '''
         Credential.credentials_list = []   
 
+    def save_multiple_credential(self):
+        self.new_credential.save_credential() 
+        test_credential=Credential("FB","glovu","1234") 
+        test_credential.save_credential()
+        self.assertEqual(len(Credential.credential_list),2)
+
+
+        
+
     def delete_credentials(self):
         '''
         delete saved credentials in the credentials list
         '''
-        Credential.credentials_list.remove(self)     
+        Credential.credentials_list.remove(self)   
+
+
+
            
 
 
