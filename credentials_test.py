@@ -6,11 +6,12 @@ class TestCredentials(unittest.TestCase):
         '''
         method to run before each test
         '''
-        self.new_credential=Credential("Glovu","geek")
+        self.new_credential=Credential("Gmail","Hezzy","geek")
     def test_init(self):
-
-        self.assertEqual(self.new_credential.account_name, "Glovu")
+        self.assertEqual(self.new_credential.account_name, "Gmail")
+        self.assertEqual(self.new_credential.username,"Hezzy")
         self.assertEqual(self.new_credential.account_password, "geek")
+        
 
     def tearDown(self):
         '''
