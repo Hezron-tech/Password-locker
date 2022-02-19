@@ -51,6 +51,10 @@ class TestCredentials(unittest.TestCase):
         test_credentials.save_credentials()
         credentials_exists = Credential.credentials_exists("Twitter")
         self.assertTrue(credentials_exists)
+
+
+
+        
 ##displaying the credentials
     def test_display_credentials(self):
         '''
