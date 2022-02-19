@@ -9,3 +9,8 @@ class Credentials:
     def __init__(self,user_password,credential_name):
         self.user_password=user_password
         self.credential_name=credential_name
+
+    def save_credential(self):
+        Credentials.Credential_list.append(self)
+        
+
