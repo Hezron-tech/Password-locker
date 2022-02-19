@@ -17,7 +17,13 @@ class TestCredentials(unittest.TestCase):
         '''
         clean up after each test to prevent errors
         '''
-        Credential.credentials_list = []    
+        Credential.credentials_list = []   
+
+    def delete_credentials(self):
+        '''
+        delete saved credentials in the credentials list
+        '''
+        Credential.credentials_list.remove(self)     
            
 
 
