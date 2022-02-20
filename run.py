@@ -1,3 +1,6 @@
+#!/usr/bin/env python3.8
+import pyperclip
+ 
 from users import User
 from credentials import Credential
 
@@ -87,16 +90,27 @@ def main():
         print("password")
         password=""
         while True:
-            print("Tp--type your password,\n Gp-generate password")
+            print("Tp-type your password,\n Gp-generate password")
             pass_choice = input().lower().strip()
-            if pass_choice=='Tp':
+            if pass_choice=='tp':
                 print("\n")
+                
                 password=input("Enter password\n")
                 break
             
-            elif pass_choice == 'Gp':
-                password = generate_password(password)
+            elif pass_choice =='gp':
+                password = input(generate_password(password))
+                
                 break
             else:
                 print("Invalid password")
+
+            save_user(create_user(username,password))
+        print("-"*90)
+        print(f"Hello {username}, Your account has been created succesfully created! Your password is: {password}")
+        print("-"*90)    
+                
                                                   
+if __name__ == '__main__':
+     main()
+
