@@ -15,6 +15,8 @@ class Credential:
 
 
 
+
+
     def delete_credentials(self):
         '''
         delete saved credentials in the credentials list
@@ -23,8 +25,8 @@ class Credential:
 
 
 
-    def create_credentials(account_name,email,passcode):
-        new_credentials=Credential.credential_list(account_name,email,passcode) 
+    def create_credentials(account_name,Hezz,passcode):
+        new_credentials=Credential.credential_list(account_name,Hezz,passcode) 
         return new_credentials  
 
     def generate_password(self):
@@ -68,6 +70,9 @@ class Credential:
             if credential.account_name == account_name:
                 return True
         return False
+
+
+
         #Display credentials
     @classmethod
     def display_credentials(cls):
