@@ -1,3 +1,4 @@
+#!usr/bin/env python3.8
 import pyperclip
 import unittest
 from credentials import Credential
