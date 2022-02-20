@@ -68,7 +68,35 @@ def verify_credential(account_name):
 
 def generate_password(self):
     ''' 
-    function tht generates password randomly
+    function that generates password randomly
     '''
     auto_password = Credential.generate_password(self)
-    return auto_password                                                 
+    return auto_password     
+
+
+
+def main():
+    print("Welcome to password locker!")
+    print("-"*30)
+    print("create new account, use:\n na--new account,\n al--existing account\n")
+    short_code = input("").lower().strip()
+    if short_code=='na':
+        print("Create new account")
+        print("username")
+        username=input()
+        print("password")
+        password=""
+        while True:
+            print("Tp--type your password,\n Gp-generate password")
+            pass_choice = input().lower().strip()
+            if pass_choice=='Tp':
+                print("\n")
+                password=input("Enter password\n")
+                break
+            
+            elif pass_choice == 'Gp':
+                password = generate_password(password)
+                break
+            else:
+                print("Invalid password")
+                                                  
