@@ -25,6 +25,10 @@ class User:
             if user.username == username:
                 return user
 
+    @classmethod
+    def display_user(cls):
+        return cls.user_list            
+
 
  
       

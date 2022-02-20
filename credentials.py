@@ -1,4 +1,5 @@
-
+import random
+import string
 class Credential:
 
     credential_list=[]
@@ -25,6 +26,15 @@ class Credential:
     def create_credentials(account_name,email,passcode):
         new_credentials=Credential.credential_list(account_name,email,passcode) 
         return new_credentials  
+
+    def generate_password(self):
+        '''
+        generate random password consisting of letters
+        '''
+        password = string.ascii_uppercase + string.ascii_lowercase
+        return ''.join(random.choice(password) for i in range(1,9))    
+
+
 
 
 
